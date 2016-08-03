@@ -8,13 +8,13 @@
 
     <dubbo:application name="dubbo-provider"/>
 
-    <dubbo:registry id="zk1" address="127.0.0.1:2181" protocol="zookeeper"/>
+    <dubbo:registry id="zk1" address="${dubbo.registry.address}" protocol="zookeeper"/>
 
     <dubbo:protocol id="mydubbo" name="dubbo" port="20886"/>
 
     <dubbo:provider registry="zk1" protocol="mydubbo"/>
 
-    <dubbo:service interface="com.demo.service.Demo" ref="demo"/>
+    <dubbo:service interface="com.service.IHelloService" ref="hello"/>
 
     <dubbo:monitor protocol="registry" />
 

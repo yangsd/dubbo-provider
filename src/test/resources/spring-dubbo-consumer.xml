@@ -12,7 +12,7 @@
 
     <dubbo:consumer registry="zk1"/>
 
-    <dubbo:reference id="demo" interface="com.demo.service.Demo"/>
+    <dubbo:reference id="demo" interface="com.service.IHelloService"/>
 
     <dubbo:monitor protocol="registry" />
 </beans>
